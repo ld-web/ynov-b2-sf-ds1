@@ -1,0 +1,19 @@
+<div
+  class="product-item-container d-lg-flex mb-3 pb-3 border-bottom border-secondary"
+>
+  <div class="product-img">
+    <a href="{{ path('product_item', { id: product.id }) }}">
+      <img src="{{ product.image }}" width="350" alt="{{ product.name }}" class="img-fluid" />
+    </a>
+  </div>
+  <div class="product-infos pl-lg-4">
+    {% if product.promo %}
+      {{ include('product/product_promo.html.twig') }}
+    {% endif %}
+    <h3>{{ product.name }}</h3>
+    <p class="text-small">{{ product.created|date("d/m/Y") }}</p>
+    <a href="{{ path('product_item', { id: product.id }) }}" class="btn btn-light"
+      >En savoir <img src="{{ asset('/icons/plus.svg') }}" alt="En savoir +"
+    /></a>
+  </div>
+</div>
