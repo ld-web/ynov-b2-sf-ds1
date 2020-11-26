@@ -25,6 +25,7 @@ Vous allez réaliser un site simple présentant des produits.
 |id|int||
 |name|string||
 |description|text||
+|image|string|L'illustration du produit|
 |promo|boolean||
 |display|boolean|_Afficher le produit ou non_|
 |priceHT|float||
